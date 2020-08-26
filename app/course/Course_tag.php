@@ -21,6 +21,4 @@ class Course_tag extends Model
     {
         return $this->belongsToMany(Tag::class, 'tag_id');
     }
-
-
 }

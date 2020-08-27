@@ -3,6 +3,7 @@
 namespace App\course;
 
 use Illuminate\Database\Eloquent\Model;
+use CourseTag;
 
 class Tag extends Model
 {
@@ -14,6 +15,6 @@ class Tag extends Model
 
     public function course_tag()
     {
-        return $this->belongsToMany(Course_tag::class);
+        return $this->belongsToMany(CourseTag::class);
     }
 }

@@ -3,6 +3,10 @@
 namespace App\course;
 
 use Illuminate\Database\Eloquent\Model;
+use CourseTag;
+use CourseUser;
+use Lesson;
+
 
 class Course extends Model
 {
@@ -19,11 +23,11 @@ class Course extends Model
 
     public function course_tag ()
     {
-        return $this->belongsToMany(Course_tag::class);
+        return $this->belongsToMany(CourseTag::class);
     }
 
     public function course_user ()
     {
-        return $this->belongsToMany(Course_user::class);
+        return $this->belongsToMany(CourseUser::class);
     }
 }

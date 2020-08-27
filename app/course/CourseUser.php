@@ -3,8 +3,10 @@
 namespace App\course;
 
 use Illuminate\Database\Eloquent\Model;
+use Course;
+use User;
 
-class Course_user extends Model
+class CourseUser extends Model
 {
     use SoftDeletes;
     protected $table= 'course_user';

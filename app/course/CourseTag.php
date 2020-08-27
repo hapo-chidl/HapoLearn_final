@@ -3,8 +3,10 @@
 namespace App\course;
 
 use Illuminate\Database\Eloquent\Model;
+use Course;
+use Tag;
 
-class Course_tag extends Model
+class CourseTag extends Model
 {
     use SoftDeletes;
     protected $table= 'course_tag';

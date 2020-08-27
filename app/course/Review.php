@@ -3,6 +3,8 @@
 namespace App\course;
 
 use Illuminate\Database\Eloquent\Model;
+use Lesson;
+use User;
 
 class Review extends Model
 {

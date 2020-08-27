@@ -3,6 +3,9 @@
 namespace App\course;
 
 use Illuminate\Database\Eloquent\Model;
+use Review;
+use LessonUser;
+use CourseUser;
 
 class User extends Model
 {
@@ -19,11 +22,11 @@ class User extends Model
 
     public function lesson_user()
     {
-        return $this->belongsToMany(Lesson_user::class);
+        return $this->belongsToMany(LessonUser::class);
     }
 
     public function course_user()
     {
-        return $this->belongsToMany(Course_user::class);
+        return $this->belongsToMany(CourseUser::class);
     }
 }

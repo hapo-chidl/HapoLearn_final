@@ -10,7 +10,7 @@ use Course;
 class Lesson extends Model
 {
     use SoftDeletes;
-    protected $table= 'lessons';
+    protected $table = 'lessons';
     protected $filleable = [
         'name', 'requements', 'description', 'course_id',
     ];

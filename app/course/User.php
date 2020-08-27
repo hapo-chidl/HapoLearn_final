@@ -10,7 +10,7 @@ use CourseUser;
 class User extends Model
 {
     use SoftDeletes;
-    protected $table= 'users';
+    protected $table = 'users';
     protected $filleable = [
         'name', 'avatar', 'role', 'password', 'link_facebook', 'email', 'link_slack', 'introduction',
     ];

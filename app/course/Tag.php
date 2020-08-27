@@ -8,7 +8,7 @@ use CourseTag;
 class Tag extends Model
 {
     use SoftDeletes;
-    protected $table= 'tags';
+    protected $table = 'tags';
     protected $filleable = [
         'name', 
     ];

@@ -11,7 +11,7 @@ use Lesson;
 class Course extends Model
 {
     use SoftDeletes;
-    protected $table= 'courses';
+    protected $table = 'courses';
     protected $filleable = [
         'name', 'image', 'requements', 'description', 'price', 'time',
     ];

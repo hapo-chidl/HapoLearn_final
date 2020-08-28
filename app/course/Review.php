@@ -9,7 +9,7 @@ use User;
 class Review extends Model
 {
     use SoftDeletes;
-    protected $filleable = [
+    protected $fillable = [
         'rating', 'comment', 'user_id', 'lesson_id', 'date',
     ];
 

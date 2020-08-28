@@ -10,18 +10,18 @@ use Course;
 class Lesson extends Model
 {
     use SoftDeletes;
-    protected $filleable = [
+    protected $fillable = [
         'name', 'requements', 'description', 'course_id',
     ];
 
     public function courses()
     {
-        return $this->belongsTo(Course::class,'lesson_id');
+        return $this->belongsTo(Course::class, 'lesson_id');
     }
 
     public function users ()
     {
-        return $this->belongsToMany(LessonUser::class,'leson_id');
+        return $this->belongsToMany(User::class, 'leson_id');
     }
     public function reviews()
     {

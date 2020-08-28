@@ -8,7 +8,7 @@ class LessonUser extends Model
 {
     use SoftDeletes;
     protected $table = 'lesson_user';
-    protected $filleable = [
+    protected $fillable = [
         'lesson_id', 'user_id',
     ];
 }

@@ -10,7 +10,7 @@ use Course;
 class User extends Model
 {
     use SoftDeletes;
-    protected $filleable = [
+    protected $fillable = [
         'name', 'avatar', 'role', 'password', 'link_facebook', 'email', 'link_slack', 'introduction',
     ];
 
@@ -21,11 +21,11 @@ class User extends Model
 
     public function lessons()
     {
-        return $this->belongsToMany(Lesson::class,'lesson_id');
+        return $this->belongsToMany(Lesson::class, 'lesson_id');
     }
 
     public function courses()
     {
-        return $this->belongsToMany(Course::class,'course_id');
+        return $this->belongsToMany(Course::class, 'course_id');
     }
 }

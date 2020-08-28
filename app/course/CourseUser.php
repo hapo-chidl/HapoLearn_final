@@ -8,7 +8,7 @@ class CourseUser extends Model
 {
     use SoftDeletes;
     protected $table = 'course_user';
-    protected $filleable = [
+    protected $fillable = [
         'course_id', 'user_id',
     ];
 }

@@ -12,7 +12,7 @@ class Tag extends Model
         'name', 
     ];
 
-    public function course()
+    public function courses()
     {
         return $this->belongsToMany(CourseTag::class,'course_id');
     }

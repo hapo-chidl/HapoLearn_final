@@ -19,12 +19,12 @@ class User extends Model
         return $this->belongsToMany(Review::class);
     }
 
-    public function lesson()
+    public function lessons()
     {
         return $this->belongsToMany(Lesson::class,'lesson_id');
     }
 
-    public function course()
+    public function courses()
     {
         return $this->belongsToMany(Course::class,'course_id');
     }

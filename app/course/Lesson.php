@@ -10,7 +10,6 @@ use Course;
 class Lesson extends Model
 {
     use SoftDeletes;
-    protected $table = 'lessons';
     protected $filleable = [
         'name', 'requements', 'description', 'course_id',
     ];
@@ -20,7 +19,7 @@ class Lesson extends Model
         return $this->belongsTo(Course::class,'lesson_id');
     }
 
-    public function User ()
+    public function users ()
     {
         return $this->belongsToMany(LessonUser::class,'leson_id');
     }

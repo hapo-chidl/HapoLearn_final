@@ -19,12 +19,12 @@ class Course extends Model
         return $this->hasMany(Lesson::class);
     }
 
-    public function tags ()
+    public function tags()
     {
         return $this->belongsToMany(Tag::class, 'tag_id');
     }
 
-    public function users ()
+    public function users()
     {
         return $this->belongsToMany(User::class, 'user_id');
     }

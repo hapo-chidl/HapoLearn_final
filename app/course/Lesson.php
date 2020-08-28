@@ -19,10 +19,11 @@ class Lesson extends Model
         return $this->belongsTo(Course::class, 'lesson_id');
     }
 
-    public function users ()
+    public function users()
     {
         return $this->belongsToMany(User::class, 'leson_id');
     }
+    
     public function reviews()
     {
         return $this->hasMany(Review::class);

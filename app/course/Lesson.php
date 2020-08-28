@@ -3,7 +3,7 @@
 namespace App\course;
 
 use Illuminate\Database\Eloquent\Model;
-use LessonUser;
+use User;
 use Review;
 use Course;
 

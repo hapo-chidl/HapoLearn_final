@@ -3,7 +3,7 @@
 namespace App\course;
 
 use Illuminate\Database\Eloquent\Model;
-use CourseTag;
+use Course;
 
 class Tag extends Model
 {

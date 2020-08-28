@@ -4,8 +4,8 @@ namespace App\course;
 
 use Illuminate\Database\Eloquent\Model;
 use Review;
-use LessonUser;
-use CourseUser;
+use Lesson;
+use Course;
 
 class User extends Model
 {

@@ -3,8 +3,6 @@
 namespace App\course;
 
 use Illuminate\Database\Eloquent\Model;
-use User;
-use Lesson;
 
 class LessonUser extends Model
 {

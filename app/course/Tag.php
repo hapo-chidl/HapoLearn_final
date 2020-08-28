@@ -8,13 +8,12 @@ use CourseTag;
 class Tag extends Model
 {
     use SoftDeletes;
-    protected $table = 'tags';
     protected $filleable = [
         'name', 
     ];
 
-    public function course_tag()
+    public function course()
     {
-        return $this->belongsToMany(CourseTag::class);
+        return $this->belongsToMany(CourseTag::class,'course_id');
     }
 }

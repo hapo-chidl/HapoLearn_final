@@ -7,11 +7,9 @@ use CourseTag;
 use CourseUser;
 use Lesson;
 
-
 class Course extends Model
 {
     use SoftDeletes;
-    protected $table = 'courses';
     protected $filleable = [
         'name', 'image', 'requements', 'description', 'price', 'time',
     ];
@@ -21,13 +19,13 @@ class Course extends Model
         return $this->hasMany(Lesson::class);
     }
 
-    public function course_tag ()
+    public function tag ()
     {
-        return $this->belongsToMany(CourseTag::class);
+        return $this->belongsToMany(Tag::class,'tag_id');
     }
 
-    public function course_user ()
+    public function User ()
     {
-        return $this->belongsToMany(CourseUser::class);
+        return $this->belongsToMany(User::class,'user_id');
     }
 }

@@ -17,15 +17,15 @@ class Lesson extends Model
 
     public function courses()
     {
-        return $this->belongsTo(Course::class, 'course_id');
+        return $this->belongsTo(Course::class,'lesson_id');
     }
 
-    public function lesson_user ()
+    public function User ()
     {
-        return $this->belongsToMany(LessonUser::class);
+        return $this->belongsToMany(LessonUser::class,'leson_id');
     }
     public function reviews()
     {
-        return $this->belongsTo(Review::class);
+        return $this->hasMany(Review::class);
     }
 }

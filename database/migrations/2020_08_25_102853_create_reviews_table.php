@@ -17,8 +17,8 @@ class CreateReviewsTable extends Migration
             $table->increments('id');
             $table->tinyInteger('rating')->nullable();
             $table->text('comment')->nullable();
-            $table->integer('user_id')->nullable();
-            $table->integer('lesson_id')->nullable();
+            $table->integer('user_id');
+            $table->integer('lesson_id');
             $table->timestamps();
             $table->softDeletes();
         });

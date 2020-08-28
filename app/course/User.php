@@ -10,7 +10,6 @@ use CourseUser;
 class User extends Model
 {
     use SoftDeletes;
-    protected $table = 'users';
     protected $filleable = [
         'name', 'avatar', 'role', 'password', 'link_facebook', 'email', 'link_slack', 'introduction',
     ];
@@ -20,13 +19,13 @@ class User extends Model
         return $this->belongsToMany(Review::class);
     }
 
-    public function lesson_user()
+    public function lesson()
     {
-        return $this->belongsToMany(LessonUser::class);
+        return $this->belongsToMany(Lesson::class,'lesson_id');
     }
 
-    public function course_user()
+    public function course()
     {
-        return $this->belongsToMany(CourseUser::class);
+        return $this->belongsToMany(Course::class,'course_id');
     }
 }

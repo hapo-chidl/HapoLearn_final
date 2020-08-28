@@ -12,4 +12,3 @@ class CourseUser extends Model
         'course_id', 'user_id',
     ];
 }
-
